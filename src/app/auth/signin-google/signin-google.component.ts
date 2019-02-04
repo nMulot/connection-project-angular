@@ -9,10 +9,13 @@ import {Router} from '@angular/router';
 })
 export class SigninGoogleComponent implements OnInit {
 
+  urlFront: string;
+
   constructor(private authService: AuthService,
               private router: Router) { }
 
   ngOnInit() {
+    this.urlFront = this.authService.urlFront;
     const isConnected = this.authService.isConnected();
     if ( isConnected === true ) {
       this.router.navigate(['/profile']);

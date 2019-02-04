@@ -3,8 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { UndefinedComponent } from './undefined/undefined.component';
-
+import { NotFoundComponent } from './not-found/not-found.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { HeaderBlockComponent } from './header-block/header-block.component';
@@ -23,7 +22,7 @@ import {ProfileComponent} from './profile/profile.component';
 @NgModule({
   declarations: [
     AppComponent,
-    UndefinedComponent,
+    NotFoundComponent,
     HeaderBlockComponent,
     HomeComponent,
     SigninComponent,

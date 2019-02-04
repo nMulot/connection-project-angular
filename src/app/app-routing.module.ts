@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {AppComponent} from './app.component';
-import {UndefinedComponent} from './undefined/undefined.component';
+import {NotFoundComponent} from './not-found/not-found.component';
 import {HomeComponent} from './home/home.component';
 import {SigninComponent} from './auth/signin/signin.component';
 import {ConfirmationComponent} from './auth/confirmation/confirmation.component';
@@ -17,7 +17,7 @@ const routes: Routes = [
   { path: 'auth/confirmation', canActivate: [AuthGuardService], component: ConfirmationComponent },
   { path: 'auth/error', component: ErrorComponent },
   { path: 'profile', canActivate: [AuthGuardService], component: ProfileComponent },
-  { path: 'error-404', component: UndefinedComponent },
+  { path: 'error-404', component: NotFoundComponent },
   { path: '**', redirectTo: 'error-404' },
 ];
 

@@ -20,5 +20,5 @@
      routerLink="/profile"><mat-icon>perm_identity</mat-icon> Profil</a>
   <a mat-list-item
      *ngIf="isConnected === true"
-     href="http://localhost:3000/auth/logout"><mat-icon>lock</mat-icon> Déconnexion</a>
+     href="{{ urlFront }}/auth/logout"><mat-icon>lock</mat-icon> Déconnexion</a>
 </mat-nav-list>

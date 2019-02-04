@@ -8,24 +8,23 @@ import {Observable, Subject} from 'rxjs';
 export class AuthService {
 
     isConnect = false;
+    urlFront = 'http://localhost:3000';
 
     constructor(private httpClient: HttpClient,
                 private router: Router,
                 private cookieService: CookieService) {
         this.isConnect = (this.cookieService.getCookie('isConnected')  === 'true');
     }
-
     getConnectedUser(): Observable<boolean> | Promise<boolean> | boolean  {
         const connectSid = this.cookieService.getCookie('connect.sid');
         return new Promise(
             (resolve, reject) => {
                 this.httpClient
-                    .get('http://localhost:3000/auth/profile', {
+                    .get(this.urlFront + '/auth/profile', {
                         params: new HttpParams().set('connectSidAngular', connectSid)
                     })
                     .subscribe(
                         (response) => {
-                            //console.log(response);
                             // if user is not connected, redirect page
                             if (response === null || !(response['googleId']) ) {
                                 console.log('you are not connected');
