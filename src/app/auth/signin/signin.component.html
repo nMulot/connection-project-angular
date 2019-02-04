@@ -1,0 +1,19 @@
+<form [formGroup]="signInForm" (ngSubmit)="onSubmit()">
+  <div class="example-container">
+
+    <mat-form-field>
+      <input matInput placeholder="Entrer votre email" formControlName="email" required>
+      <mat-error *ngIf="email.invalid">{{ getErrorMessage() }}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Entrer votre mot de passe" [type]="hide ? 'password' : 'text'" formControlName="password">
+      <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      <mat-error *ngIf="password.invalid">{{ getErrorMessage() }}</mat-error>
+    </mat-form-field>
+
+    <button mat-flat-button color="primary"
+            type="submit"
+            [disabled]="signInForm.invalid">Connecter</button>
+  </div>
+</form>

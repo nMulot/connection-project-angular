@@ -1,0 +1,24 @@
+<mat-nav-list>
+  <a mat-list-item
+     routerLinkActive="active"
+     [routerLinkActiveOptions]="{exact: true}"
+     routerLink="/"><mat-icon>home</mat-icon> Accueil</a>
+  <!--<a mat-list-item-->
+     <!--routerLinkActive="active"-->
+     <!--[routerLinkActiveOptions]="{exact: true}"-->
+     <!--*ngIf="isConnected === false"-->
+     <!--routerLink="/auth/signin"><mat-icon>lock_open</mat-icon> Connexion</a>-->
+  <a mat-list-item
+     routerLinkActive="active"
+     [routerLinkActiveOptions]="{exact: true}"
+     *ngIf="isConnected === false"
+     routerLink="/auth/signin-google"><mat-icon>lock_open</mat-icon> Connexion Google</a>
+  <a mat-list-item
+     routerLinkActive="active"
+     [routerLinkActiveOptions]="{exact: true}"
+     *ngIf="isConnected === true"
+     routerLink="/profile"><mat-icon>perm_identity</mat-icon> Profil</a>
+  <a mat-list-item
+     *ngIf="isConnected === true"
+     href="http://localhost:3000/auth/logout"><mat-icon>lock</mat-icon> Déconnexion</a>
+</mat-nav-list>
