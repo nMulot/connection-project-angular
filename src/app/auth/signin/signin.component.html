@@ -1,4 +1,4 @@
-<form [formGroup]="signInForm" (ngSubmit)="onSubmit()">
+<form [formGroup]="signInForm" (ngSubmit)="onSubmit()" >
   <div class="example-container">
 
     <mat-form-field>
@@ -17,3 +17,16 @@
             [disabled]="signInForm.invalid">Connecter</button>
   </div>
 </form>
+
+
+<!--<form #form method="POST" action="/">-->
+  <!--<div class="example-container">-->
+
+      <!--<input placeholder="Entrer votre email" name="email" required>-->
+
+      <!--<input placeholder="Entrer votre mot de passe" type="text" name="password">-->
+    <!--<input color="primary"-->
+            <!--type="submit"-->
+    <!--value="connecter">-->
+  <!--</div>-->
+<!--</form>-->

@@ -8,12 +8,12 @@ import {AuthService} from '../services/auth.service';
 export class HeaderBlockComponent implements OnInit {
 
   isConnected: boolean;
-  urlFront: string;
+  urlBack: string;
 
   constructor(private authService: AuthService) { }
 
   ngOnInit() {
-    this.urlFront = this.authService.urlFront;
+    this.urlBack = this.authService.urlBack;
     this.isConnected = this.authService.isConnected();
   }
 
