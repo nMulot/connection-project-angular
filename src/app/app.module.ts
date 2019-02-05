@@ -12,11 +12,10 @@ import { SigninComponent } from './auth/signin/signin.component';
 import { ConfirmationComponent } from './auth/confirmation/confirmation.component';
 import { ErrorComponent } from './auth/error/error.component';
 import { HttpClientModule } from '@angular/common/http';
-import { SigninGoogleComponent } from './auth/signin-google/signin-google.component';
-import {AuthGuardService} from './services/auth-guard.service';
-import {AuthService} from './services/auth.service';
-import {CookieService} from './services/cookie.service';
-import {ProfileComponent} from './profile/profile.component';
+import { AuthGuardService } from './services/auth-guard.service';
+import { AuthService } from './services/auth.service';
+import { CookieService } from './services/cookie.service';
+import { ProfileComponent } from './profile/profile.component';
 
 
 @NgModule({
@@ -28,7 +27,6 @@ import {ProfileComponent} from './profile/profile.component';
     SigninComponent,
     ConfirmationComponent,
     ErrorComponent,
-    SigninGoogleComponent,
     ProfileComponent
   ],
   imports: [

@@ -5,6 +5,7 @@ export class CookieService {
 
     constructor() { }
 
+    // retrieve the requested cookie
     getCookie(name: string) {
         const ca: Array<string> = document.cookie.split(';');
         const caLen: number = ca.length;

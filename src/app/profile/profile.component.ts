@@ -11,6 +11,7 @@ import {CookieService} from '../services/cookie.service';
 export class ProfileComponent implements OnInit {
 
   username = '';
+  email = '';
   thumbnail = '';
   googleId = '';
 
@@ -20,6 +21,7 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit() {
     this.username = decodeURI(this.cookieService.getCookie('user_username'));
+    this.email = decodeURIComponent(this.cookieService.getCookie('user_email'));
     this.thumbnail = decodeURIComponent(this.cookieService.getCookie('user_thumbnail'));
     this.googleId = decodeURI(this.cookieService.getCookie('user_google_id'));
   }

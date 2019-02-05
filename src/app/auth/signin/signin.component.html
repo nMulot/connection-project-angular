@@ -1,3 +1,4 @@
+<h3>Connectez-vous par authentification classique ou par Google+</h3>
 <form [formGroup]="signInForm" (ngSubmit)="onSubmit()" >
   <div class="example-container">
 
@@ -17,16 +18,7 @@
             [disabled]="signInForm.invalid">Connecter</button>
   </div>
 </form>
+<div class="google-container">
+  <a class="mat-flat-button google-plus" href="{{ urlBack }}/auth/google">Connection Google+</a>
+</div>
 
-
-<!--<form #form method="POST" action="/">-->
-  <!--<div class="example-container">-->
-
-      <!--<input placeholder="Entrer votre email" name="email" required>-->
-
-      <!--<input placeholder="Entrer votre mot de passe" type="text" name="password">-->
-    <!--<input color="primary"-->
-            <!--type="submit"-->
-    <!--value="connecter">-->
-  <!--</div>-->
-<!--</form>-->

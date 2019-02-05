@@ -3,16 +3,11 @@
      routerLinkActive="active"
      [routerLinkActiveOptions]="{exact: true}"
      routerLink="/"><mat-icon>home</mat-icon> Accueil</a>
-  <!--<a mat-list-item-->
-     <!--routerLinkActive="active"-->
-     <!--[routerLinkActiveOptions]="{exact: true}"-->
-     <!--*ngIf="isConnected === false"-->
-     <!--routerLink="/auth/signin"><mat-icon>lock_open</mat-icon> Connexion</a>-->
   <a mat-list-item
      routerLinkActive="active"
      [routerLinkActiveOptions]="{exact: true}"
      *ngIf="isConnected === false"
-     routerLink="/auth/signin-google"><mat-icon>lock_open</mat-icon> Connexion Google</a>
+     routerLink="/auth/signin"><mat-icon>lock_open</mat-icon> Connexion</a>
   <a mat-list-item
      routerLinkActive="active"
      [routerLinkActiveOptions]="{exact: true}"
